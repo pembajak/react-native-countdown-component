@@ -1,5 +1,5 @@
 {
-  "name": "react-native-countdown-component",
+  "name": "@pembajak/react-native-countdown-component",
   "version": "2.7.1",
   "description": "React Native CountDown Component",
   "repository": {
@@ -26,8 +26,32 @@
     "url": "https://github.com/talalmajali/react-native-countdown-component/issues"
   },
   "dependencies": {
+    "@release-it/conventional-changelog": "^2.0.0",
     "lodash": "^4.17.13",
-    "sprintf-js": "^1.1.1",
-    "prop-types": "^15.5.8"
+    "prop-types": "^15.5.8",
+    "sprintf-js": "^1.1.1"
+  },
+  "scripts": {
+    "release": "release-it"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release ${version}",
+      "tagName": "v${version}"
+    },
+    "npm": {
+      "publish": true
+    },
+    "github": {
+      "release": true
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular"
+      }
+    }
+  },
+  "devDependencies": {
+    "release-it": "^14.2.2"
   }
 }
