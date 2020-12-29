@@ -25,6 +25,21 @@
   "bugs": {
     "url": "https://github.com/talalmajali/react-native-countdown-component/issues"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "yarn lint && yarn typescript"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
   "dependencies": {
     "@release-it/conventional-changelog": "^2.0.0",
     "lodash": "^4.17.13",
